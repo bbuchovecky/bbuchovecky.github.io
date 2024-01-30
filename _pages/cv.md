@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[PDF here](https://academicpages.github.io/files/buchovecky_fall2023_cv.pdf)
+[PDF here](https://bbuchovecky.github.io/files/buchovecky_fall2023_cv.pdf)
 
 Education
 ======
