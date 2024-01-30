@@ -25,12 +25,12 @@ Research experience
     * Investigated tropical precipitation change using a variety of Intertropical Convergence Zone (ITCZ) metrics and quantified interhemispheric energy imbalances across 13 CMPI6 models.
     * Designed and ran experiments with the GFDL-AM2.5 climate model to further examine the tropical precipitation response globally and regionally in Africa.
     * Advisor: Professor Gabriel Vecchi
-
-**Research Internship, Ecoclimate Lab <code>&#124;</code> University of Washington <code>&#124;</code> June 2022 - August 2022**
-  * Explored the contribution of the plant physiological response to Arctic amplification and heat transport across multiple CMIP6 models.
-  * Advisors: Professor Abigail Swann, Professor Kyle Armour
   
-  * **Research Internship <code>&#124;</code> Princeton University & NOAA Geophysical Fluid Dynamics Lab <code>&#124;</code> June 2021 - August 2021**
+  * **Research Internship, Ecoclimate Lab <code>&#124;</code> University of Washington <code>&#124;</code> June 2022 - August 2022**
+    * Explored the contribution of the plant physiological response to Arctic amplification and heat transport across multiple CMIP6 models.
+    * Advisors: Professor Abigail Swann, Professor Kyle Armour
+  
+  * **Research Internship <code>&#124;</code> Princeton University & NOAA GFDL <code>&#124;</code> June 2021 - August 2021**
     * Quantified the seasonal-to-decadal predictability of phytoplankton blooms using a suite of perfect model experiments with the GFDL-ESM2M climate model.
     * Developed a mechanistic explanation for the progression of predictability from sea ice to biogeochemical fields in the Southern Ocean. 
     * Principal author of paper accepted to *Geophysical Research Letters*.

@@ -50,7 +50,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification :
+google_site_verification : google534ff18ec5f8331b.html
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Ben Buchovecky"
   avatar           : "profile.jpg"
-  bio              : "Research Scientist at UW Atmos"
+  bio              : "Postbac Research Scientist at UW Atmos"
   location         : "Seattle, WA"
   employer         :
   pubmed           : 
