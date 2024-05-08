@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-I am an assistant research scientist in the Department of Atmospheric Sciences at the University of Washington, working with Prof. Abigail Swann in the [Ecoclimate Lab](https://www.atmos.washington.edu/~aswann/LabWebsitePublic/).
+I am a postbac research scientist in the Department of Atmospheric Sciences at the University of Washington, working with Prof. Abigail Swann in the [Ecoclimate Lab](https://www.atmos.washington.edu/~aswann/LabWebsitePublic/). In the fall, I will be starting as a graduate student.
 
