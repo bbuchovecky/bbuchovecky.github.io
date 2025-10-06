@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bbuchovecky.github.io/sitemap.xml
+
+# Optional: Block any admin or private areas (if you add them later)
+# Disallow: /private/
+# Disallow: /admin/
