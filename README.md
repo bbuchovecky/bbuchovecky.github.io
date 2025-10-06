@@ -1,4 +1,4 @@
-# Personal Website (GitHub Pages)
+<!-- # Personal Website (GitHub Pages)
 Static site with three pages (About, CV, Research) modeled after a minimal academic layout.
 
 ## Quick start
@@ -10,4 +10,4 @@ Static site with three pages (About, CV, Research) modeled after a minimal acade
 ## Optional
 - Update `footer` links.
 - Add a `CNAME` file if you use a custom domain.
-- Add `robots.txt` or analytics as desired.
+- Add `robots.txt` or analytics as desired. -->

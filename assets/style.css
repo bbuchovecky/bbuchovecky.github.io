@@ -111,7 +111,7 @@ html[data-theme="dark"] .border-top { border-color: rgba(255,255,255,0.12) !impo
 html[data-theme="dark"] .navbar-light .navbar-brand, 
 html[data-theme="dark"] .navbar-light .navbar-nav .nav-link { color: #e6e6e6; }
 html[data-theme="dark"] .navbar-light .navbar-nav .nav-link.active { color: #b719bd; font-weight: bold; }
-html[data-theme="dark"] a { color: #99169d; text-decoration: none; }
+html[data-theme="dark"] a { color: #b719bd; text-decoration: none; }
 html[data-theme="dark"] a:hover { text-decoration: underline; }
 html[data-theme="dark"] #theme-toggle { 
   border: none !important; 
@@ -135,7 +135,7 @@ html[data-theme="dark"] #theme-toggle:hover {
   html:not([data-theme]) .navbar-light .navbar-brand, 
   html:not([data-theme]) .navbar-light .navbar-nav .nav-link { color: #e6e6e6; }
   html:not([data-theme]) .navbar-light .navbar-nav .nav-link.active { color: #b719bd; font-weight: bold; }
-  html:not([data-theme]) a { color: #99169d; text-decoration: none; }
+  html:not([data-theme]) a { color: #b719bd; text-decoration: none; }
   html:not([data-theme]) a:hover { text-decoration: underline; }
   html:not([data-theme]) #theme-toggle { 
     border: none !important; 
