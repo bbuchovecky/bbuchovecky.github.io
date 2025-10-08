@@ -27,6 +27,48 @@ h1, .navbar-brand {
 }
 img { object-fit: cover; }
 
+/* Social media icons styling */
+.social-icons {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+.social-icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.social-icon-btn img {
+  transition: opacity 0.3s ease;
+}
+
+/* Dark theme social icons */
+html[data-theme="dark"] .social-icon-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .social-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* System preference dark theme social icons */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) .social-icon-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  html:not([data-theme]) .social-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 /* PDF embed styling */
 .pdf-container iframe {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

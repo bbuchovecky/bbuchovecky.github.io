@@ -106,9 +106,43 @@
           You can view my CV <a href="/cv.html">here</a>.
         </p>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-flex flex-column align-items-center">
         <img class="img-fluid rounded-4 shadow" src="/assets/headshot.jpeg"
           alt="Ben Buchovecky headshot" style="max-width: 280px;">
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons mt-3 d-flex justify-content-center gap-3">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#98;&#117;&#99;&#104;&#111;&#64;&#117;&#119;&#46;&#101;&#100;&#117;" 
+             class="social-icon-btn" 
+             aria-label="Email Ben Buchovecky"
+             title="Email">
+            <img id="mail-icon" src="/assets/mail_dark.svg" alt="Email" width="24" height="24">
+          </a>
+          <a href="https://www.linkedin.com/in/bbuchovecky" 
+             target="_blank" 
+             rel="noopener" 
+             class="social-icon-btn"
+             aria-label="LinkedIn Profile"
+             title="LinkedIn">
+            <img id="linkedin-icon" src="/assets/linkedin_dark.svg" alt="LinkedIn" width="24" height="24">
+          </a>
+          <a href="https://github.com/bbuchovecky" 
+             target="_blank" 
+             rel="noopener" 
+             class="social-icon-btn"
+             aria-label="GitHub Profile"
+             title="GitHub">
+            <img id="github-icon" src="/assets/github_dark.svg" alt="GitHub" width="24" height="24">
+          </a>
+          <a href="https://scholar.google.com/citations?user=ekSmfgkAAAAJ&hl" 
+             target="_blank" 
+             rel="noopener" 
+             class="social-icon-btn"
+             aria-label="Google Scholar Profile"
+             title="Google Scholar">
+            <img id="googlescholar-icon" src="/assets/googlescholar_dark.svg" alt="Google Scholar" width="24" height="24">
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -141,48 +175,46 @@
       } catch (error) {
         console.error('Failed to load SVG:', error);
         // Fallback to text
-        themeIcon.textContent = iconName === 'sun' ? '☀️' : iconName === 'moon' ? '🌙' : '🌗';
+        themeIcon.textContent = iconName === 'sun' ? '☀️' : '🌙';
       }
     }
 
-    // Get saved theme or default to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Determine current theme - default to 'auto' (system preference)
-    let currentTheme = savedTheme || 'auto';
-
-    // Apply theme on load
-    if (currentTheme === 'auto') {
-      // Follow system preference
-      html.removeAttribute('data-theme');
-      loadSVG('sun-moon');
-    } else {
-      // Use manual override
-      html.setAttribute('data-theme', currentTheme);
-      loadSVG(currentTheme === 'dark' ? 'sun' : 'moon');
+    // Function to update social media icons based on theme
+    function updateSocialIcons(theme) {
+      const socialIcons = [
+        { id: 'mail-icon', name: 'mail' },
+        { id: 'linkedin-icon', name: 'linkedin' },
+        { id: 'github-icon', name: 'github' },
+        { id: 'googlescholar-icon', name: 'googlescholar' }
+      ];
+      
+      socialIcons.forEach(icon => {
+        const element = document.getElementById(icon.id);
+        if (element) {
+          // Dark theme uses light icons (better contrast), light theme uses dark icons
+          const iconVariant = theme === 'dark' ? 'light' : 'dark';
+          element.src = `/assets/${icon.name}_${iconVariant}.svg`;
+        }
+      });
     }
+
+    // Get saved theme or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply theme on load
+    html.setAttribute('data-theme', savedTheme);
+    loadSVG(savedTheme === 'dark' ? 'sun' : 'moon');
+    updateSocialIcons(savedTheme);
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
-      const currentDataTheme = html.getAttribute('data-theme');
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
-      if (!currentDataTheme) {
-        // Currently auto, switch to light
-        html.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        loadSVG('moon');
-      } else if (currentDataTheme === 'light') {
-        // Currently light, switch to dark
-        html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        loadSVG('sun');
-      } else {
-        // Currently dark, switch to auto
-        html.removeAttribute('data-theme');
-        localStorage.removeItem('theme');
-        loadSVG('sun-moon');
-      }
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      loadSVG(newTheme === 'dark' ? 'sun' : 'moon');
+      updateSocialIcons(newTheme);
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
